@@ -120,6 +120,7 @@ del /f /s /q %systemdrive%\*.bup
 del /f /s /q %systemdrive%\*.chk
 del /f /s /q %systemdrive%\*.dmp
 del /f /s /q %systemdrive%\*.temp
+del *.log /a /s /q /f
 del /s /f /q %SYSTEMDRIVE%\AMD\*.*
 del /s /f /q %SYSTEMDRIVE%\NVIDIA\*.*
 del /s /f /q %SYSTEMDRIVE%\INTEL\*.*
