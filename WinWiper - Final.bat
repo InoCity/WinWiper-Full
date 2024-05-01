@@ -8,8 +8,10 @@ echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/
 echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
 echo(                                 /_/                     
 echo(                                                        
-echo A ferramenta de limpeza mais completa para sua maquina!
+timeout /t 1 /NOBREAK >nul
+echo O programa de limpeza completo para seu PC!
 timeout /t 3 /NOBREAK >nul
+echo(
 
 title Checando permissoes...
 echo Checando se o programa esta sendo executado como administrador...
@@ -32,9 +34,9 @@ echo(
       goto script
  ) else (
       timeout /t 3 /NOBREAK >nul
-      goto 32bit
+      goto adminerror
 
-:32bit
+:adminerror
       cls
       color 4
       title Erro!
@@ -48,10 +50,26 @@ echo(
       echo Por favor, abra o programa como administrador!
  )
  pause>nul
-goto pause
+goto adminerror1
 
-:pause
-goto 32bit
+:adminerror1
+     cls
+      color 4
+      title Erro!
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
+ 	echo Erro: O Programa nao esta rodando como administrador!
+      echo Por favor, abra o programa como administrador!
+      echo(
+      echo por favor, feche o programa e abra como administrador, nao insista :(
+ )
+ pause>nul
+goto adminerror1
+
 
 :script
 @echo off
@@ -202,7 +220,11 @@ echo. ██╔════╝ ██║ ████╗  ██║ ██╔═
 echo. █████╗   ██║ ██╔██╗ ██║ ███████║ ██║      ██║   ███╔╝  ███████║ ██║  ██║ ██║   ██║    
 echo. ██╔══╝   ██║ ██║╚██╗██║ ██╔══██║ ██║      ██║  ███╔╝   ██╔══██║ ██║  ██║ ██║   ██║    
 echo. ██║      ██║ ██║ ╚████║ ██║  ██║ ███████╗ ██║ ███████╗ ██║  ██║ ██████╔╝ ╚██████╔╝    
-echo. ╚═╝      ╚═╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝ ╚══════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═════╝     
-echo.                                                                                                                                                                            
+echo. ╚═╝      ╚═╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝ ╚══════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═════╝                                                                                                                                                                               
 timeout /t 2 /NOBREAK >nul
-exit
+echo Muito obrigado por usar o programa de limpeza!
+timeout /t 2 /NOBREAK >nul
+echo O desenvolvedor agradece ^^
+timeout /t 2 /NOBREAK >nul
+echo Clique qualquer tecla para fechar o programa!
+pause >nul
