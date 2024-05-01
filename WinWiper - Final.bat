@@ -8,6 +8,7 @@ echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/
 echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
 echo(                                 /_/                     
 echo(                                                        
+echo A ferramenta de limpeza mais completa para sua maquina!
 timeout /t 3 /NOBREAK >nul
 
 title Checando permissoes...
