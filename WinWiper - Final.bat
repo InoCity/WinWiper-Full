@@ -138,7 +138,7 @@ timeout /t 1 /NOBREAK >nul
 echo por InoCity, no Discord/GitHub
 timeout /t 1 /NOBREAK >nul
 echo Obrigado para Memphis e aMathyzin (Discord)
-timeout /t 2 /NOBREAK >nul
+timeout /t 3 /NOBREAK >nul
 
 cls
 color 9
