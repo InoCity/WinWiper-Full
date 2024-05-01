@@ -1,6 +1,16 @@
 @echo off
+chcp 65001 >nul
+color f
+title WinWiper
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
+timeout /t 3 /NOBREAK >nul
+
 title Checando permissoes...
-Color F
 echo Checando se o programa esta sendo executado como administrador...
 net session >nul 2>&1
  if [%errorLevel%] == [0] (
@@ -8,16 +18,28 @@ net session >nul 2>&1
       cls
       color 2
       title Permissoes detectadas.
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
       echo Permissoes detectadas!
  	echo Ok! Vamos continuar!
       timeout /t 2 /NOBREAK >nul
       cls
       goto script
  ) else (
-      timeout /t /NOBREAK 3 >nul
+      timeout /t 3 /NOBREAK >nul
       cls
       color 4
       title Erro!
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
  	echo Erro: O Programa nao esta rodando como administrador!
       echo Por favor, abra o programa como administrador!
  )
@@ -27,6 +49,12 @@ net session >nul 2>&1
 @echo off
 color f
 title Gerando informacoes...
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
 echo Detectando arquitetura do processador...
 echo Se seu processador for 64 bits, o programa ira executar normalmente
 echo Caso for 32bits, o programa ira fechar automaticamente, pois nao sera compativel
@@ -45,6 +73,13 @@ timeout /t 1 /NOBREAK >nul
 for /F "skip=1 delims=" %%A in ('wmic cpu get name') do if not defined cpu_name set "cpu_name=%%A"
 echo Processador: %cpu_name%
 title Erro!
+color 4
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
 echo seu processador é 32bit, fechando programa...
 timeout /t 2 /NOBREAK >nul
 goto END
@@ -52,6 +87,12 @@ goto END
 :64BIT
 @echo off
 color A
+echo(  _      __  _        _      __  _                       
+echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
+echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
+echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
+echo(                                 /_/                     
+echo(                                                        
 echo Detectando processador...
 timeout /t 1 /NOBREAK >nul
 echo .
@@ -75,7 +116,6 @@ exit
 
 :BATCH
 cls
-chcp 65001 >nul
 color f
 title WinWiper
 echo(  _      __  _        _      __  _                       
@@ -101,11 +141,7 @@ echo. ██║      ██║ ██╔████╔██║ █████
 echo. ██║      ██║ ██║╚██╔╝██║ ██╔═══╝  ██╔══██║ ██║╚██╗██║ ██║  ██║ ██║   ██║    
 echo. ███████╗ ██║ ██║ ╚═╝ ██║ ██║      ██║  ██║ ██║ ╚████║ ██████╔╝ ╚██████╔╝    
 echo. ╚══════╝ ╚═╝ ╚═╝     ╚═╝ ╚═╝      ╚═╝  ╚═╝ ╚═╝  ╚═══╝ ╚═════╝   ╚═════╝     
-echo.                                                                             
-echo.                                                                             
-echo.                                                                             
-echo.                                                                             
-echo.                                                                                                                                                                                                                   
+echo.                                                                                                                                                                                                                                                                                             
 timeout /t 2 /NOBREAK >nul
 
 cls
@@ -159,10 +195,6 @@ echo. █████╗   ██║ ██╔██╗ ██║ ████�
 echo. ██╔══╝   ██║ ██║╚██╗██║ ██╔══██║ ██║      ██║  ███╔╝   ██╔══██║ ██║  ██║ ██║   ██║    
 echo. ██║      ██║ ██║ ╚████║ ██║  ██║ ███████╗ ██║ ███████╗ ██║  ██║ ██████╔╝ ╚██████╔╝    
 echo. ╚═╝      ╚═╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝ ╚══════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═════╝     
-echo.                                                                                       
-echo.                                                                                       
-echo.                                                                                       
-echo.                                                                                       
-echo.                                                                                       
+echo.                                                                                                                                                                            
 timeout /t 2 /NOBREAK >nul
 exit
