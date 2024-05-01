@@ -31,6 +31,9 @@ echo(
       goto script
  ) else (
       timeout /t 3 /NOBREAK >nul
+      goto 32bit
+
+:32bit
       cls
       color 4
       title Erro!
@@ -44,6 +47,10 @@ echo(
       echo Por favor, abra o programa como administrador!
  )
  pause>nul
+goto pause
+
+:pause
+goto 32bit
 
 :script
 @echo off
