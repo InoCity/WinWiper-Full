@@ -156,7 +156,7 @@ echo O limpador completo para o seu PC!
 timeout /t 1 /NOBREAK >nul
 echo por InoCity, no Discord/GitHub
 timeout /t 1 /NOBREAK >nul
-echo Obrigado para Memphis e aMathyzin (Discord)
+echo Obrigado para aMathyzin (Discord)
 timeout /t 3 /NOBREAK >nul
 
 cls
