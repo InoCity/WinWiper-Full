@@ -1,6 +1,6 @@
 # WinWiper 
 
-(PT-BR Version) (US-EN under development)      
+(PT-BR Version)
 by InoCity
 
 Thanks to: aMathyzin (Discord)
