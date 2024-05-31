@@ -50,26 +50,7 @@ echo(
       echo Por favor, abra o programa como administrador!
  )
  pause>nul
-goto adminerror1
-
-:adminerror1
-     cls
-      color 4
-      title Erro!
-echo(  _      __  _        _      __  _                       
-echo( ^| ^| /^| / / ^(_^) ___  ^| ^| /^| / / ^(_^) ___   ___   ____     
-echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/     
-echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
-echo(                                 /_/                     
-echo(                                                        
- 	echo Erro: O Programa nao esta rodando como administrador!
-      echo Por favor, abra o programa como administrador!
-      echo(
-      echo por favor, feche o programa e abra como administrador, nao insista :(
- )
- pause>nul
-goto adminerror1
-
+goto adminerror
 
 :script
 @echo off
@@ -84,7 +65,7 @@ echo(
 echo Detectando arquitetura do processador...
 echo Se seu processador for 64 bits, o programa ira executar normalmente
 echo Caso for 32bits, o programa ira fechar automaticamente, pois nao sera compativel
-timeout /t 4 /NOBREAK >nul
+timeout /t 3 /NOBREAK >nul
 cls
 
 if "%PROCESSOR_ARCHITECTURE%"=="AMD64" goto 64BIT
@@ -218,5 +199,6 @@ echo Muito obrigado por usar o programa de limpeza!
 timeout /t 2 /NOBREAK >nul
 echo O desenvolvedor agradece ^^
 timeout /t 2 /NOBREAK >nul
-echo Clique qualquer tecla para fechar o programa!
-pause >nul
+echo Fechando o programa automaticamente...
+timeout /t 2 /NOBREAK >nul
+exit
