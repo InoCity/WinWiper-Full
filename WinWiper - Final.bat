@@ -87,7 +87,8 @@ echo( ^| ^|/ ^|/ / / / / _ \ ^| ^|/ ^|/ / / / / _ \ / -_^) / __/
 echo( ^|__/^|__/ /_/ /_//_/ ^|__/^|__/ /_/ / .__/ \__/ /_/        
 echo(                                 /_/                     
 echo(                                                        
-echo seu processador é 32bit, fechando programa...
+echo Seu processador e 32bit, infelizmente o programa nao e compativel.
+echo Fechando o programa em 2 segundos...
 timeout /t 2 /NOBREAK >nul
 goto END
 
