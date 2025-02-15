@@ -1,5 +1,4 @@
 # WinWiper 
-# Full version
 
 (PT-BR Version)
 by InoCity
